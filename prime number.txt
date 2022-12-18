@@ -1,35 +1,33 @@
 #include <stdio.h>
 
-int main()
-{
-    
-    int n,m=0,a=0,i;
-    
-    printf("Enter any number to cheak prime no ");
-    scanf("%d",&n);
-    
-    m=n/2;
-    
-    for(i=2;i<m;i++)
-    
-    {
-        if(n%i==0)
-        {
-            printf("Number is not prime");
-            a=1;
-            break;
-        }
-    }
-    
-    if(a==0)
-    
-        printf("Number is prime ");
-    
-   
+int main() {
+   int n,count=0;
   
+ 
+ printf("enter A Number:");
+ scanf("%d",&n);
+ 
+ for(int i=2;i<n;i++)
+ {
+     if(n%i==0)
+     {
+         count++;
+         break;
+     }
+ }
+ 
+ if(count==0)
+ {
+     printf("number is prime ");
+ }
+ else
+ {
+     printf("no is not prime");
+ }
     return 0;
 }
-
+    
+   
 
 Output - Number is prime or not
 
